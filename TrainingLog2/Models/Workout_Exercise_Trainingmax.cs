@@ -11,15 +11,17 @@ using Android.Views;
 using Android.Widget;
 using SQLite;
 
-namespace TrainingLog2.Entities
+namespace TrainingLog2.Models
 {
-    [Table("Categories")]
-    public class Category
+    [Table("Workouts_Exercises_Trainingmax")]
+    public class Workout_Exercise_Trainingmax
     {
         [PrimaryKey, AutoIncrement]
         public int Id { get; set; }
-        
-        [Unique]
-        public string Name { get; set; }
+
+        //References Workouts_Exercises(Id)
+        public int Workouts_ExercisesId { get; set; }
+
+        public decimal TrainingMax { get; set; }
     }
 }

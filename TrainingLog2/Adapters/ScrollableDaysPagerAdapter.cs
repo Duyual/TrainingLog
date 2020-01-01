@@ -12,12 +12,13 @@ using Android.Util;
 using Android.Views;
 using Android.Widget;
 using Java.Lang;
-using TrainingLog2.Entities;
+using TrainingLog2.Views;
+using TrainingLog2.Models;
 using TrainingLog2.SQLiteServices;
 
-namespace TrainingLog2.Fragments
+namespace TrainingLog2.Adapters
 {
-    public class CustomFragmentPagerAdapter : FragmentStatePagerAdapter
+    public class ScrollableDaysPagerAdapter : FragmentStatePagerAdapter
     {
         private SQLiteHandler handler;
         public DateTime date;
@@ -25,7 +26,7 @@ namespace TrainingLog2.Fragments
         public List<DateTime> date_list;
         public int positionNum = 1;
 
-        public CustomFragmentPagerAdapter(FragmentManager fm, DateTime date) : base(fm)
+        public ScrollableDaysPagerAdapter(FragmentManager fm, DateTime date) : base(fm)
         {
             this.handler = new SQLiteHandler();
             this.date = date;
@@ -56,21 +57,6 @@ namespace TrainingLog2.Fragments
 
         public override ICharSequence GetPageTitleFormatted(int position)
         {
-            /*string title = "";
-            switch(position)
-            {
-                case 0:
-                    title = date.ToString("ddd, dd MMM");
-                    break;
-                case 1:
-                    date = DateTime.Now;
-                    title = date.ToString("ddd, dd MMM");
-                    break;
-                case 2:
-                    date = DateTime.Now.AddDays(1);
-                    title = date.ToString("ddd, dd MMM");
-                    break;
-            }*/
             string title = GetItem(position).ToString();
             return new Java.Lang.String(title);
         }

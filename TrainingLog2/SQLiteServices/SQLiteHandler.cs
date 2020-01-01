@@ -11,8 +11,7 @@ using Android.Util;
 using Android.Views;
 using Android.Widget;
 using SQLite;
-using TrainingLog2.Entities;
-using static TrainingLog2.DateTimeClass;
+using TrainingLog2.Models;
 
 namespace TrainingLog2.SQLiteServices
 {

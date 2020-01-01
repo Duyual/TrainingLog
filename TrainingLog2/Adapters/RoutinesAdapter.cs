@@ -11,9 +11,9 @@ using Android.Util;
 using Android.Views;
 using Android.Widget;
 using Java.Lang;
-using TrainingLog2.Entities;
+using TrainingLog2.Models;
 
-namespace TrainingLog2
+namespace TrainingLog2.Adapters
 {
     public class RoutinesAdapter : ArrayAdapter<Routine>
     {

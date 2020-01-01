@@ -13,7 +13,7 @@ using Android.Views;
 using Android.Widget;
 using TrainingLog2.SQLiteServices;
 
-namespace TrainingLog2.Fragments
+namespace TrainingLog2.Views
 {
     public class AddRoutineFragment : Android.Support.V4.App.Fragment
     {

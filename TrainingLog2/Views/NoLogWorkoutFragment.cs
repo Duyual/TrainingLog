@@ -13,7 +13,7 @@ using Android.Util;
 using Android.Views;
 using Android.Widget;
 
-namespace TrainingLog2.Fragments
+namespace TrainingLog2.Views
 {
     public class NoLogWorkoutFragment : Android.Support.V4.App.Fragment
     {

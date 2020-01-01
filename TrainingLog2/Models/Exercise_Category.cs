@@ -11,19 +11,20 @@ using Android.Views;
 using Android.Widget;
 using SQLite;
 
-namespace TrainingLog2.Entities
+namespace TrainingLog2.Models
 {
-    [Table("Target_Sets")]
-    public class Target_Set
+    [Table("Exercises_Categories")]
+    public class Exercise_Category
     {
         [PrimaryKey, AutoIncrement]
         public int Id { get; set; }
 
-        //References Workouts_Exercises(Id)
-        public int Workout_ExerciseId { get; set; }
+        public string Name { get; set; }
 
-        public int Min_reps { get; set; }
+        //References Exercises(Id)
+        public int ExerciseId { get; set; }
 
-        public int Max_reps { get; set; }
+        //References Categories(Id)
+        public int CategoryId { get; set; }
     }
 }

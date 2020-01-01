@@ -11,7 +11,7 @@ using Android.Views;
 using Android.Widget;
 using SQLite;
 
-namespace TrainingLog2.Entities
+namespace TrainingLog2.Models
 {
     [Table("Workouts")]
     public class Workout

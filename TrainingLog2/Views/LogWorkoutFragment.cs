@@ -10,10 +10,11 @@ using Android.Runtime;
 using Android.Support.V7.Widget;
 using Android.Views;
 using Android.Widget;
-using TrainingLog2.Entities;
+using TrainingLog2.Adapters;
+using TrainingLog2.Models;
 using TrainingLog2.SQLiteServices;
 
-namespace TrainingLog2.Fragments
+namespace TrainingLog2.Views
 {
     public class LogWorkoutFragment : Android.Support.V4.App.Fragment
     {

@@ -12,15 +12,16 @@ using Android.Support.V4.View;
 using Android.Util;
 using Android.Views;
 using Android.Widget;
+using TrainingLog2.Adapters;
 using TrainingLog2.SQLiteServices;
 
-namespace TrainingLog2.Fragments
+namespace TrainingLog2.Views
 {
 
     public class MainFragment : Android.Support.V4.App.Fragment, ViewPager.IOnPageChangeListener
     {
         private ViewPager viewPager;
-        private CustomFragmentPagerAdapter adapter;
+        private ScrollableDaysPagerAdapter adapter;
         private SQLiteHandler handler;
         private bool notifyUpdate = false;
         public override void OnCreate(Bundle savedInstanceState)
@@ -35,7 +36,7 @@ namespace TrainingLog2.Fragments
             // Use this to return your custom view for this Fragment
             // return inflater.Inflate(Resource.Layout.YourFragment, container, false);
             View mainView = inflater.Inflate(Resource.Layout.nav_dates_main, container, false);
-            CustomFragmentPagerAdapter adapter = new CustomFragmentPagerAdapter(this.ChildFragmentManager, DateTime.Now.Date);
+            ScrollableDaysPagerAdapter adapter = new ScrollableDaysPagerAdapter(this.ChildFragmentManager, DateTime.Now.Date);
             this.adapter = adapter;
             viewPager = mainView.FindViewById<ViewPager>(Resource.Id.viewPager);
             viewPager.Adapter = adapter;

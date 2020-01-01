@@ -8,10 +8,9 @@ using Android.Support.V4.View;
 using Android.Support.V4.Widget;
 using Android.Support.V7.App;
 using Android.Views;
-using TrainingLog2.Fragments;
 using TrainingLog2.SQLiteServices;
 
-namespace TrainingLog2
+namespace TrainingLog2.Views
 {
     [Activity(Label = "@string/app_name", Theme = "@style/AppTheme.NoActionBar", MainLauncher = true)]
     public class MainActivity : AppCompatActivity, NavigationView.IOnNavigationItemSelectedListener

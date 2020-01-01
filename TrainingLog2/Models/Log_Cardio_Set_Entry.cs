@@ -9,13 +9,12 @@ using Android.OS;
 using Android.Runtime;
 using Android.Views;
 using Android.Widget;
-using Java.Sql;
 using SQLite;
 
-namespace TrainingLog2.Entities
+namespace TrainingLog2.Models
 {
-    [Table("Log_Set_Entries")]
-    public class Log_Set_Entry
+    [Table("Log_Cardio_Set_Entries")]
+    public class Log_Cardio_Set_Entry
     {
         [PrimaryKey, AutoIncrement]
         public int Id { get; set; }
@@ -24,12 +23,15 @@ namespace TrainingLog2.Entities
 
         public DateTime Date { get; set; }
 
-        public decimal Weight { get; set; }
+        public decimal Distance { get; set; }
 
-        public int Reps { get; set; }
+        //example: m, km, ft, mi
+        public string Type { get; set; }
 
-        public int Min_reps { get; set; }
+        public int Hours { get; set; } = 0;
 
-        public int Max_reps { get; set; }
+        public int Minutes { get; set; } = 0;
+
+        public int Seconds { get; set; } = 0;
     }
 }

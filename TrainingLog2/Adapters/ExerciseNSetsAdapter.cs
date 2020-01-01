@@ -13,7 +13,7 @@ using Android.Widget;
 using static Android.Support.V7.Widget.RecyclerView;
 using static TrainingLog2.SQLiteServices.SQLiteHandler;
 
-namespace TrainingLog2
+namespace TrainingLog2.Adapters
 {
     public class ExerciseNSetsAdapter : RecyclerView.Adapter, LinearLayout.IOnClickListener
     {

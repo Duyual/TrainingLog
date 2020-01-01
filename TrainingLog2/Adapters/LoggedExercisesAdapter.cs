@@ -11,11 +11,11 @@ using Android.Support.V7.Widget;
 using Android.Util;
 using Android.Views;
 using Android.Widget;
-using TrainingLog2.Entities;
+using TrainingLog2.Models;
 using TrainingLog2.SQLiteServices;
 using static Android.Support.V7.Widget.RecyclerView;
 
-namespace TrainingLog2
+namespace TrainingLog2.Adapters
 {
     public class LoggedExercisesAdapter : RecyclerView.Adapter
     {
